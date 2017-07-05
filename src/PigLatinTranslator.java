@@ -8,14 +8,17 @@ public class PigLatinTranslator {
         char[] vowels = {'a', 'e', 'i', 'o', 'u'};
         String choice = "";
 
+        //Here is the while loop for the continue statement
         while(!"n".equals(choice)){
         System.out.println("Please enter a word you wish not to understand");
         userInput = scan.nextLine().toLowerCase();
 
-            for (int i = 0; i < userInput.length(); i++) {
+        //this for loop gets the letter
+        for (int i = 0; i < userInput.length(); i++) {
 
                     char letter = userInput.charAt(i);
 
+                    //this for loop check the vowel
                     for (int j = 0; j < vowels.length; j++) {
 
                         if (vowels[j] == letter) {
@@ -42,6 +45,7 @@ public class PigLatinTranslator {
 
     public static void main(String[] args) {
         System.out.println("Welcome to not understanding the English language\n");
+        //here I am calling the method, askForWord
         askForWord();
     }
 }
